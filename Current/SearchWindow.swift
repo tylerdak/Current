@@ -121,9 +121,12 @@ struct PopupView: View {
                         newMediaItem.overview = selectedItem.overview
                         print(newMediaItem.managedObjectContext ?? "Unknown")
                         
-                        let newtag = Tag(context: self.moc)
-                        newtag.tagName = tag
-                        newMediaItem.addToUserTags(newtag)
+                        
+                        var oldUserTags = newMediaItem.wrappedUserTags
+                        oldUserTags.insert(tag)
+                        oldUserTags.insert("All")
+                       
+                        newMediaItem.userTags = oldUserTags
                         
                         try? self.moc.save()
                     }) {

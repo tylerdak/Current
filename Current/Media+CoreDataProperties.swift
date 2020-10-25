@@ -17,10 +17,10 @@ extension Media {
     }
 
     @NSManaged public var id: String?
+    @NSManaged public var overview: String?
     @NSManaged public var portraitImgName: String?
     @NSManaged public var title: String?
-    @NSManaged public var overview: String?
-    @NSManaged public var userTags: NSSet?
+    @NSManaged public var userTags: Set<String>?
     
     public var wrappedTitle: String {
         title ?? "Unknown Title"
@@ -38,30 +38,11 @@ extension Media {
         id ?? "INVALID-ID"
     }
     
-    public var wrappedUserTags: [Tag] {
-        let set = userTags as? Set<Tag> ?? []
+    public var wrappedUserTags: Set<String> {
+        guard let set = userTags else { return [] }
         
-        return set.sorted {
-            $0.wrappedTagName < $1.wrappedTagName
-        }
+        return set
     }
-
-}
-
-// MARK: Generated accessors for userTags
-extension Media {
-
-    @objc(addUserTagsObject:)
-    @NSManaged public func addToUserTags(_ value: Tag)
-
-    @objc(removeUserTagsObject:)
-    @NSManaged public func removeFromUserTags(_ value: Tag)
-
-    @objc(addUserTags:)
-    @NSManaged public func addToUserTags(_ values: NSSet)
-
-    @objc(removeUserTags:)
-    @NSManaged public func removeFromUserTags(_ values: NSSet)
 
 }
 
