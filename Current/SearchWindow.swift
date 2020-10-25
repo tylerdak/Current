@@ -9,7 +9,11 @@ import SwiftUI
 
 struct SearchWindow: View {
     let platform: Platform
+    
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Media.entity(), sortDescriptors: []) var mediaGroup: FetchedResults<Media>
+    
     @State private var query = ""
     @State var searchResults: [MediaType] = []
     @State var selectedItem: MediaType? = nil
@@ -72,7 +76,7 @@ struct SearchWindow: View {
             else {
                 ScrollView(.vertical, showsIndicators: false) {
                     ForEach(searchResults) { item in
-                        ListItemView(item: item, selectedItem: $selectedItem)
+                        ListItemView(item: item, selectedItem: $selectedItem).environment(\.managedObjectContext, moc)
                     }
                 }
             }

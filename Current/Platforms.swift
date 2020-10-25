@@ -32,24 +32,24 @@ struct Platform: Hashable, Identifiable {
     }
 }
 
-let movieType = Platform(title: "Movies", systemIcon: "film", tags: ["Watch Later", "Disliked", "Loved", "Watched"])
-let showType = Platform(title: "Shows", systemIcon: "tv", tags: ["Watch Later", "Disliked", "Loved", "Watching", "Finished", "Finish Later", "Abandoned"])
-let gameType = Platform(title: "Games", systemIcon: "gamecontroller", tags: ["Play Later", "Disliked", "Loved", "Playing", "Finished", "On the Shelf", "Abandoned"])
-let bookType = Platform(title: "Books", systemIcon: "book", tags: ["Read Later", "Disliked", "Loved", "Reading", "Finished", "On the Shelf", "Abandoned"])
+let movieType = Platform(title: "Movies", systemIcon: "film", tags: ["Watch Later", "Disliked", "Loved", "Watched", "All"])
+let showType = Platform(title: "Shows", systemIcon: "tv", tags: ["Watch Later", "Disliked", "Loved", "Watching", "Finished", "Finish Later", "Abandoned", "All"])
+let gameType = Platform(title: "Games", systemIcon: "gamecontroller", tags: ["Play Later", "Disliked", "Loved", "Playing", "Finished", "On the Shelf", "Abandoned", "All"])
+let bookType = Platform(title: "Books", systemIcon: "book", tags: ["Read Later", "Disliked", "Loved", "Reading", "Finished", "On the Shelf", "Abandoned", "All"])
 
 struct MediaType: Hashable, Identifiable {
     let title: String
     let portraitImgName: String
     let id: String
-    let description: String
+    let overview: String
     let userTags: [String]
     
     init(title: String, imgLoc: String, description: String, id: String) {
         self.title = title
-        self.id = id
+        self.id = title + id
         self.portraitImgName = imgLoc
         self.userTags = [String]()
         
-        self.description = description
+        self.overview = description
     }
 }

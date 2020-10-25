@@ -10,6 +10,10 @@ import SwiftUI
 
 struct PlatformView: View {
     let platform: Platform
+    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Media.entity(), sortDescriptors: []) var mediaGroup: FetchedResults<Media>
+    
     @State private var showingError = false
     @State private var errorTitle = ""
     @State private var errorMessage = ""
@@ -18,7 +22,7 @@ struct PlatformView: View {
     var body: some View {
         List {
             ForEach(platform.tags, id: \.self) { tag in
-                HorizontalCollectionView(title: tag, collection: [])
+                HorizontalCollectionView(title: tag, collection: mediaGroup)
             }
         }
         .padding(.top, 5)
@@ -37,7 +41,7 @@ struct PlatformView: View {
         .sheet(isPresented: $showingSearch, onDismiss: {
             searchResults = []
         }) {
-            SearchWindow(platform: platform)
+            SearchWindow(platform: platform).environment(\.managedObjectContext, self.moc)
         }
         
     }

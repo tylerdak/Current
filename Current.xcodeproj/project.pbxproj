@@ -21,6 +21,10 @@
 		D01C223A2544CC2000901B38 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C22392544CC2000901B38 /* Gradients.swift */; };
 		D01C223D2544D7EB00901B38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C223C2544D7EB00901B38 /* Constants.swift */; };
 		D01C2240254506F100901B38 /* UIImageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C223F254506F100901B38 /* UIImageFromURL.swift */; };
+		D01C22472545434200901B38 /* Media+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C22432545434200901B38 /* Media+CoreDataClass.swift */; };
+		D01C22482545434200901B38 /* Media+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C22442545434200901B38 /* Media+CoreDataProperties.swift */; };
+		D01C22492545434200901B38 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C22452545434200901B38 /* Tag+CoreDataClass.swift */; };
+		D01C224A2545434200901B38 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C22462545434200901B38 /* Tag+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		D01C22392544CC2000901B38 /* Gradients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 		D01C223C2544D7EB00901B38 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D01C223F254506F100901B38 /* UIImageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageFromURL.swift; sourceTree = "<group>"; };
+		D01C22432545434200901B38 /* Media+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D01C22442545434200901B38 /* Media+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D01C22452545434200901B38 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D01C22462545434200901B38 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 		D00C6F552544992D00D2AF07 /* Current */ = {
 			isa = PBXGroup;
 			children = (
+				D01C22432545434200901B38 /* Media+CoreDataClass.swift */,
+				D01C22442545434200901B38 /* Media+CoreDataProperties.swift */,
+				D01C22452545434200901B38 /* Tag+CoreDataClass.swift */,
+				D01C22462545434200901B38 /* Tag+CoreDataProperties.swift */,
 				D00C6F5A2544992E00D2AF07 /* Assets.xcassets */,
 				D00C6F5F2544992E00D2AF07 /* Persistence.swift */,
 				D00C6F7D254499EF00D2AF07 /* CurrentApp.swift */,
@@ -174,11 +186,15 @@
 				D01C2240254506F100901B38 /* UIImageFromURL.swift in Sources */,
 				D00C6F602544992E00D2AF07 /* Persistence.swift in Sources */,
 				D00C6F81254499EF00D2AF07 /* Secret.swift in Sources */,
+				D01C22482545434200901B38 /* Media+CoreDataProperties.swift in Sources */,
 				D01C222E2544B8F900901B38 /* Posters.swift in Sources */,
 				D01C22322544B97200901B38 /* SearchWindow.swift in Sources */,
 				D00C6F83254499EF00D2AF07 /* Platforms.swift in Sources */,
+				D01C22492545434200901B38 /* Tag+CoreDataClass.swift in Sources */,
 				D00C6F632544992E00D2AF07 /* Current.xcdatamodeld in Sources */,
+				D01C22472545434200901B38 /* Media+CoreDataClass.swift in Sources */,
 				D00C6F82254499EF00D2AF07 /* PlatformView.swift in Sources */,
+				D01C224A2545434200901B38 /* Tag+CoreDataProperties.swift in Sources */,
 				D00C6F80254499EF00D2AF07 /* CurrentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

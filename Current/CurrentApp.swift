@@ -12,17 +12,21 @@ import SwiftUI
 
 @main
 struct CurrentApp: App {
-//    let persistenceController = PersistenceController.shared
+    let context = PersistentCloudKitContainer.persistentContainer.viewContext
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Media.entity(), sortDescriptors: []) var mediaGroup: FetchedResults<Media>
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 if UIDevice.current.userInterfaceIdiom == .phone {
                     MainView()
                         .listStyle(InsetListStyle())
+                        .environment(\.managedObjectContext, context)
                 }
                 else {
                     MainView()
                         .listStyle(SidebarListStyle())
+                        .environment(\.managedObjectContext, context)
                 }
             }
             .accentColor(.purple)
@@ -35,9 +39,11 @@ struct CurrentApp: App {
 
 
 struct MainView: View {
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Media.entity(), sortDescriptors: []) var mediaGroup: FetchedResults<Media>
     var body: some View {
         List(sortedPlatforms) { platform in
-            NavigationLink(destination: PlatformView(platform: platform)) {
+            NavigationLink(destination: PlatformView(platform: platform).environment(\.managedObjectContext, self.moc)) {
                 Label {
                     Text(platform.title)
                         .padding(.leading)
@@ -47,7 +53,6 @@ struct MainView: View {
                 }
                 .font(.title2)
                 .padding(6)
-                
             }
         }
         .navigationTitle("Current")
