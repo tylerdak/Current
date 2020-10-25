@@ -2,18 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/tylerdakin/Documents/xcode/Current/Current/CurrentApp.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/tylerdakin/Documents/xcode/Current/Current/Platforms.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/tylerdakin/Documents/xcode/Current/Current/PlatformView.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/tylerdakin/Documents/xcode/Current/Current/Secret.swift">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17507" systemVersion="20A5395g" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Media" representedClassName="Media" syncable="YES">
+    <entity name="Media" representedClassName=".Media" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="overview" optional="YES" attributeType="String"/>
         <attribute name="portraitImgName" optional="YES" attributeType="String"/>
@@ -12,7 +12,7 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <entity name="Tag" representedClassName="Tag" syncable="YES">
+    <entity name="Tag" representedClassName=".Tag" syncable="YES">
         <attribute name="tagName" optional="YES" attributeType="String"/>
         <relationship name="media" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Media" inverseName="userTags" inverseEntity="Media"/>
         <uniquenessConstraints>
@@ -22,7 +22,7 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Media" positionX="-63" positionY="-18" width="128" height="14"/>
-        <element name="Tag" positionX="-63" positionY="9" width="128" height="14"/>
+        <element name="Media" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Tag" positionX="-63" positionY="9" width="128" height="59"/>
     </elements>
 </model>

@@ -13,16 +13,21 @@ struct PlatformView: View {
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Media.entity(), sortDescriptors: []) var mediaGroup: FetchedResults<Media>
+    @FetchRequest(entity: Tag.entity(), sortDescriptors: []) var tagGroup: FetchedResults<Tag>
     
     @State private var showingError = false
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingSearch = false
-    @State private var searchResults: [MediaType] = []
+    @State private var searchResults: [Media] = []
     var body: some View {
         List {
             ForEach(platform.tags, id: \.self) { tag in
-                HorizontalCollectionView(title: tag, collection: mediaGroup)
+                HorizontalCollectionView(title: tag, mediaGroup: mediaGroup.filter({ (media) -> Bool in
+                    media.wrappedUserTags.contains { (tagObject) -> Bool in
+                        tagObject.wrappedTagName == tag
+                    }
+                }))
             }
         }
         .padding(.top, 5)

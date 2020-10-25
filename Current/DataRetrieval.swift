@@ -38,6 +38,7 @@ extension SearchWindow {
                             var finalResults: [MediaType] = []
                             for result in tempResults {
                                 let new = MediaType(title: result.title, imgLoc: "https://image.tmdb.org/t/p/original" + (result.poster_path ?? ""), description: result.overview ?? "", id: String(result.id))
+                                
                                 finalResults.append(new)
                             }
                             searchResults = finalResults

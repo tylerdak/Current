@@ -25,6 +25,7 @@
 		D01C22482545434200901B38 /* Media+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C22442545434200901B38 /* Media+CoreDataProperties.swift */; };
 		D01C22492545434200901B38 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C22452545434200901B38 /* Tag+CoreDataClass.swift */; };
 		D01C224A2545434200901B38 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C22462545434200901B38 /* Tag+CoreDataProperties.swift */; };
+		D01C224D25455FA800901B38 /* SlideOverCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01C224C25455FA800901B38 /* SlideOverCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		D01C22442545434200901B38 /* Media+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Media+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D01C22452545434200901B38 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D01C22462545434200901B38 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D01C224C25455FA800901B38 /* SlideOverCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				D00C6F7E254499EF00D2AF07 /* PlatformView.swift */,
 				D01C22312544B97200901B38 /* SearchWindow.swift */,
 				D00C6F7C254499EF00D2AF07 /* Platforms.swift */,
+				D01C224C25455FA800901B38 /* SlideOverCard.swift */,
 				D01C222D2544B8F900901B38 /* Posters.swift */,
 				D01C22392544CC2000901B38 /* Gradients.swift */,
 				D01C22352544C35C00901B38 /* DataRetrieval.swift */,
@@ -193,6 +196,7 @@
 				D01C22492545434200901B38 /* Tag+CoreDataClass.swift in Sources */,
 				D00C6F632544992E00D2AF07 /* Current.xcdatamodeld in Sources */,
 				D01C22472545434200901B38 /* Media+CoreDataClass.swift in Sources */,
+				D01C224D25455FA800901B38 /* SlideOverCard.swift in Sources */,
 				D00C6F82254499EF00D2AF07 /* PlatformView.swift in Sources */,
 				D01C224A2545434200901B38 /* Tag+CoreDataProperties.swift in Sources */,
 				D00C6F80254499EF00D2AF07 /* CurrentApp.swift in Sources */,
